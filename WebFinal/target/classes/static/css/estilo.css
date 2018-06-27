@@ -1,0 +1,459 @@
+/* ============== Layout ==================== */
+html,
+body{
+	height: 100%;
+	overflow: auto;
+}
+
+body {
+	background-attachment: fixed;
+	font-family: sans-serif;
+	font-size: 13px;
+	overflow-x: hidden;
+}
+
+/*----Barra de Navegação--*/
+
+.nav .nav-link:hover,
+.dropdown-item {
+	color: #a2a0a0;
+	font-weight: bold;
+	background-color: #404040;
+	
+}
+
+.sticky-top {
+	height: 160px;
+	margin-bottom: 30px;
+}
+
+.navbar .navbar-brand img {
+	margin-top: 20px;
+	width: 180px;
+	height: 180px;
+}
+
+.form-inline {
+		margin-top: 15px;
+		margin-right: 71px;
+}
+
+nav.navbar-cor {
+	background-color: #191970;
+}
+
+.nav {
+	height: 36px;
+}
+
+#search {
+	border-radius: 0;
+	color: white;
+	background-color: #191970;
+	transition: background 0.4s, color 0.4s;
+	border: none;
+}
+
+#search:hover {
+	border-radius: 0px;
+	color: white;
+	background-color: gray;
+	border: none;
+}
+
+.fa-search {
+	font-size: 37px !important;
+}
+
+.divisor {
+	width: 1px;
+	height: 16px;
+	overflow: hidden;
+	background-color: #6f0306;
+	margin: 10px 7px;
+}
+
+.container .row .col-md-3 ul {
+	margin-top: 15px;
+	
+}
+
+.container .row .col-md-3 ul li {
+	
+	list-style: none;
+	font-family: 'OpenSans';
+	font-size: 20px;
+	color: #000;
+}
+
+
+
+.navbar-dark .navbar-nav .nav-link,
+#rodape .nav a {
+	font-weight: bold;
+	color: white;
+}
+
+.nav .nav-link,
+.dropdown-item {
+	color: #a2a0a0;
+	font-weight: bold;
+}
+
+.dropdown-menu {
+	background-color: #404040;
+}
+
+.dropdown-item:hover {
+	background-color: #404040;
+	color: white;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+#rodape .nav a:hover {
+	color: #404040;
+}
+
+.back-carousel {
+	background: url(../img/back2.jpg);
+}
+
+.badge-light {
+	color: white;
+	background: transparent;
+}
+
+#meu-carrinho {
+	color: white;
+	font-size: 15px;
+	font-weight: bold;
+	font: icon;
+}
+
+#minha-lista {
+	color: white;
+	font-size: 15px;
+	font-weight: bold;
+	font: icon;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+a:active {
+	text-decoration: none;
+}
+
+#titulo {
+	padding: 0;
+	margin-right: auto;
+	margin-top: 20px;
+	border: 0;
+	font-size: 2.3em;
+	color: #b70f15;
+}
+
+
+#ajuste {
+   	margin-right: auto;
+	border: 0;
+	color: #b70f15;
+}
+
+a#lnkEsqueciMeuEmail {
+    background: none;
+    color: #b70f15;
+    margin-left: 265px;
+}
+
+a#lnkEmailMudou {
+    background: none;
+    color: #b70f15;
+    margin-right: 20px;
+}
+
+a#lnkEsqueciMinhaSenha {
+	color: #b70f15;
+	margin-left: 370px;
+}
+
+form#loginCentralizar {
+	width: 600px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+/*---------BotÃµes--------*/
+
+.btn:not(:disabled):not(.disabled) {
+	background-color: #191970;
+	border-color: #191970;
+}
+
+.btn-custom {
+	color: white;
+	transition: background 0.4s, color 0.4s;
+}
+
+.btn-vinho {
+	font-size: 20px;
+	font-weight: bold;
+	background: #6f0306;
+}
+
+.btn-vinho:hover {
+	font-size: 20px;
+	font-weight: bold;
+	background-color: #bc0206;
+	color: white;
+}
+
+.btn-cinza {
+	background: #404040;
+}
+
+.btn-cinza:hover {
+	background-color: gray;
+	color: white;
+}
+
+.btn-link {
+	text-decoration: none !important;
+	font-size: 14px;
+	font-weight: bold;
+	color: #f7941d;
+}
+
+.btn-link:hover {
+	text-decoration: none !important;
+	font-weight: bold;
+	color: white;
+}
+
+/*----------Inputs Home-----------*/
+
+#barra-pesquisa {
+	height: 49px;
+	border-radius: 0;
+	width: 700px !important;
+}
+
+/*----Rodape----*/
+
+footer {
+	
+	background: #000;
+	padding: 50px 0px 20px 0px;
+	position: relative;
+
+}
+
+.col-md-4 ul {
+	padding-left: 60px;
+}
+
+/*===============================Tipografia=========================*/
+
+h1 {
+	font-weight: 900;
+	letter-spacing: -0.05em;
+	margin-bottom: 50px;
+}
+
+h2 {
+	font-size: 50px;
+	letter-spacing: -0.05em;
+	font-weight: 700;
+}
+
+h3 {
+	font-size: 35px;
+	letter-spacing: -0.04em;
+	font-weight: 700;
+}
+
+#rodape h4 {
+	color: #919496;
+	font-size: 12px;
+	text-transform: uppercase;
+}
+
+/*===============================Carrinho=========================*/
+
+#tam {
+	max-width: 2.3em;
+    text-align: center
+}
+
+.produtoCarrinhoAlinhar{
+	text-align: center;
+}
+
+.textoCarrinho{
+	font-size: .8em;
+    padding: .2em;
+    vertical-align: middle;
+}
+
+.formularioDoCarrinho-item-remover-imagem{
+	width: 1.5em;
+    height: 1.5em;
+}
+.atualizar{
+	background-image: 
+	url(../img/atualizar.png);
+	background-repeat: no-repeat;
+	background-position: 100%;
+	vertical-align: middle;
+    background-color: transparent;
+    background-size: 75%;
+    width: 24px;
+    height: 24px;
+    border: none;
+    cursor: pointer;
+    font-size: 0;
+}
+
+
+
+
+/*==========================Pagamento=============================*/
+
+.img-thumbnail {
+	height: 260px;
+}
+
+.container  {
+	margin-bottom: 90px;
+}
+
+.formulario {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	height: 530px;
+}
+.container .col-sm-4 .panel-body dl {
+	list-style: none;
+	font-family: 'OpenSans';
+	font-size: 18px;
+	color: #000;
+	margin-top: 10px;
+	
+}
+
+#pagamento .formulario {
+	padding-top: 10px;
+	
+}
+
+#pagamento label {
+	font-size: 14px !important;
+}
+
+
+#pagamento .row {
+	margin-right: 194px;
+    margin-left: 156px;
+}
+
+
+#pagamento .container .colunas{
+	width: 60%;
+    margin-bottom: 30px;
+	margin-top: 60px;
+	padding-top: 20px;
+    padding-bottom: 20px;
+	
+}
+
+#pagamento .col {
+	margin-left: 60px;
+
+}
+.fa-credit-card:before, .fa-barcode:before, .fa-money-check-alt:before, .fa-cc-paypal:before {
+	font-size: 65px;
+	
+}
+.formulario .form-group .cartoes {
+	margin-left: -34px;
+}
+
+.fa-cc-mastercard:before, .fa-cc-amex:before, .fa-cc-visa:before {
+	font-size: 20px;
+}
+
+
+
+/*========================Cadastro========================= */
+
+form#cadCentralizar {
+	width: 600px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+/*========================telaDescrição========================= */
+#teste{
+	padding: 0 5%;
+    background-color: #f2f0ee;
+}
+
+#botãoDescrição{
+	background: #6f0306;
+	color: #fbfaf8;
+	float: right;
+	margin-top: 10px;
+	
+
+}
+
+
+#botãoDescrição:hover {
+	font-weight: bold;
+	background-color: #bc0206;
+	color: white;
+}
+
+
+
+
+
+.aumentarLetra{
+	font-size: 150%;
+	font-family:sans-serif;
+	
+}
+.descriçãoJogo{
+	margin-bottom: 200px;
+	font-family: "open-sans", sans-serif;
+    font-size: 1.8em;
+    font-weight: 700;
+    width: 100%;
+    border-bottom: 2px solid rgba(108, 105, 105, 0.3);
+    padding-bottom: .35em;
+    margin-bottom: .6em;
+	color: #6c6a69;
+
+}
+
+.AjustarTesto{
+	font-family: "museo", serif;
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #6c6a69;
+    font-weight: 300;
+    margin-top: 1em;
+}
+
+
+.dadosJogo{
+	font-family: "museo", serif;
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #6c6a69;
+    font-weight: 300;
+    margin-top: 1em;
+}
+
+

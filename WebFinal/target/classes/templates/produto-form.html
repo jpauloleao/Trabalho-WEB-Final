@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+              crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" th:href="@{../css/estilo.css}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <title>FastShop</title>
+        <link rel="icon" href="img/favicon.png">
+    </head>
+
+    <body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-cor sticky-top">
+        <!--NavBar-->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#barra-navegacao" aria-controls="barra-navegacao"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="sr-only">Alternar Menu</span>
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="barra-navegacao">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" th:href="@{/}">Home
+                                    <span class="sr-only"></span>
+                                </a>
+                            </li>
+                            <li class="nav-item" sec:authorize="hasRole('ADMINISTRADOR')">
+                                <a class="nav-link" th:href="@{/produtos/cadastrar}">Cadastrar Produto
+                                    <span class="sr-only"></span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item" sec:authorize="hasRole('CLIENTE')">
+                                <a class="nav-link" th:href="@{/compras/}">Minhas Compras
+                                    <span class="sr-only"></span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item ml-auto" th:if="${usuario == null}">
+                                <a th:href="@{/clientes/cadastrar}"><button type="link" class="btn btn-link" data-toggle="modal" data-target="#myModal">
+                                    <i class="fa fa-sign-in" style="font-size:13px"></i> Realizar Cadastro
+                                </button></a>
+                            </li>
+                            <li class="nav-item mr-5" th:if="${usuario == null}">
+                                <a th:href="@{/entrar}"><button type="link" class="btn btn-link">
+                                    <i class="fa fa-sign-in" style="font-size:13px"></i> Realizar Login
+                                </button></a>
+                            </li>
+
+                            <li class="nav-item ml-auto" th:if="${usuario != null}">
+                                <a th:href="@{/logout}"><button type="link" class="btn btn-link">
+                                    <i class="fa fa-sign-in" style="font-size:13px"></i> Deslogar
+                                </button></a>
+                            </li>
+
+                            <li class="nav-item mr-5">
+                                <a href="carrinho.html">
+                                    <i class="fa fa-opencart" style="font-size: 25px; color: white;"></i>
+                                    <span id="meu-carrinho">Carrinho</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--/.Container-->
+        </div>
+        <!--/.Collapse-->
+    </nav>
+    <!--/.Nav-->
+
+
+    <div class="container">
+        <h2 id="titulo">Cadastro de Novo Produto</h2>
+        </br>
+        </br>
+
+        <form th:action="@{/produtos}" method="post">
+            <div class="form-row">
+                <div class="col-md-6 mb-4">
+                    <label>Nome</label>
+                    <input type="text" class="form-control" name="nome" placeholder="Nome" required>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <label>Preco</label>
+                    <input type="text" class="form-control" name="preco" placeholder="Nome" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-12 mb-3">
+                    <label>Descrição</label>
+                    <textarea class="form-control" rows="3" name="descricao"></textarea>
+                </div>
+            </div>
+            <button class="btn btn-primary btn-dark" type="submit">Cadastrar</button>
+        </form>
+    </div>
+
+    </body>
+</html>
